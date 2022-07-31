@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo UI Testing using Selenium">
+<listeners>
+    <listener class-name="com.saucedemo.tests.MyListener"/>
+</listeners>
+    <test name="Automation Practice on Firefox">
+        <parameter name="webDriverName" value="firefox"/>
+        <parameter name="appURL" value="https://www.saucedemo.com/"/>
+        <parameter name="userName" value="standard_user"></parameter>
+        <parameter name="passWord" value="secret_sauce"></parameter>
+        <parameter name="InvalidUserName" value="asd123"></parameter>
+        <parameter name="ValidPassword" value="secret_sauce"></parameter>
+        <parameter name="InValidPassword" value="asdf@123"></parameter>
+        <classes>
+            <class name="com.saucedemo.tests.ProductPageTest"></class>
+<!--            <class name="com.saucedemo.tests.LoginPageTest"></class>-->
+        </classes>
+    </test>
+
+</suite> <!-- Suite -->
